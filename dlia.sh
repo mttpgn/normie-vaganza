@@ -40,6 +40,7 @@ while (true); do
     echo "TrinketRP" >> $BADSTUFF
     echo "blend_intro" >> $BADSTUFF
     echo "NateBradleyAnimation" >> $BADSTUFF
+    echo "Fabian_de_mov" >> $BADSTUFF
 
     echo "Done writing item lists. Download loop starting." 
     NEWLIST=`sort $ITEMLIST | uniq | shuf --random-source=/dev/urandom | grep -v -f $BADSTUFF`
