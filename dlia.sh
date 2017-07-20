@@ -21,7 +21,7 @@ while (true); do
     LOG="$NV_ROOT/logs/dl/downloading_$DATE.log"
     exec > $LOG 2>&1
     echo "Checking for old logs to delete..."
-    find /var/opt/logs/dl/ -type f ! -name downloading_$DATE.log -delete # Purge log from previous days
+    find $NV_ROOT/logs/dl/ -type f ! -name downloading_$DATE.log -delete # Purge log from previous days
     echo "Now writing all items in specified I.A. collections to $ITEMLIST" 
     echo '' > $ITEMLIST # Clear the file.
     for parameter in "${COLLS[@]}"; do
