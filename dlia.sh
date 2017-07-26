@@ -35,6 +35,7 @@ while (true); do
     echo "cartoon7" >> $BADSTUFF
     echo "Jingle_bells" >> $BADSTUFF
     echo "NoAudio" >> $BADSTUFF
+    echo "PhelixSlutstopplayanimation" >> $BADSTUFF
     echo "Sintel" >> $BADSTUFF
     echo "Maddness" >> $BADSTUFF
     echo "TrinketRP" >> $BADSTUFF
