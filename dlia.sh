@@ -14,6 +14,7 @@ NV_ROOT="/var/opt/normie-vaganza"
 SEARCHPARAMETERS="$NV_ROOT/config/searchparams.cfg"
 ITEMLIST="$NV_ROOT/config/itemlist.txt"
 BADSTUFF="$NV_ROOT/config/badstuff.txt"
+TOLERABLE=90
 readarray -t COLLS < $SEARCHPARAMETERS
 
 while (true); do
@@ -55,7 +56,7 @@ while (true); do
         if [ ! -d "/srv/iarchive/$item" ]; then
             echo "Beginning to download $item" 
             SPACEFREE=`df -k /srv | awk '{if ($1 != "Filesystem") print $5 " "}' | tr -d '%' | cut -d \  -f 1`
-            if [[ "$SPACEFREE" -gt 95 ]]; then
+            if [[ "$SPACEFREE" -gt "$TOLERABLE" ]]; then
                 echo "Insufficient space. Please do some filesystem cleanup."
                 echo "Waiting 15 minutes before retrying."
                 sleep 900 # Wait 15 mins for the other script to catch up
