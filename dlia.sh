@@ -33,6 +33,8 @@ while (true); do
     echo "Banned" >> $BADSTUFF
     echo "multfilmi" >> $BADSTUFF
     echo "cartoon7" >> $BADSTUFF
+    echo "South_Park_Stop_Motion_Animation_Test__1" >> $BADSTUFF
+    echo "South_Park_Stop_Motion_Animation_Test__2" >> $BADSTUFF
     echo "Jingle_bells" >> $BADSTUFF
     echo "NoAudio" >> $BADSTUFF
     echo "PhelixSlutstopplayanimation" >> $BADSTUFF
