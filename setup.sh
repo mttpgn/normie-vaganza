@@ -8,6 +8,7 @@
 mkdir /srv/iarchive
 mkdir /srv/iarchive_staging
 chmod 777 /srv/iarchive
+chmod 777 /srv/iarchive_staging
 mkdir /var/opt/normie-vaganza
 chmod 777 /var/opt/normie-vaganza
 cp -a ./* /var/opt/normie-vaganza
