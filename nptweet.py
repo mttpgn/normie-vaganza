@@ -1,3 +1,4 @@
+#!/usr/bin/python2.7
 import tweepy
 
 keys = ['/etc/tweepy_akey',\
