@@ -20,7 +20,7 @@ while (true); do
     D=`date +'%Y%m%d'`
     LOGNAME="$NV_ROOT/logs/np/nowplaying_$D.log"
     if [ -n "$(ls -A /srv/iarchive)" ]; then
-        itemidentifier=`ls /srv/iarchive | shuf -n 1`
+        itemidentifier=`ls -t /srv/iarchive | tail -1` # No need for shuffling here; it's already done.
         echo "We'll play $itemidentifier"
         for freshfile in `ls /srv/iarchive/$itemidentifier --sort=size`; do
             echo "Selecting $freshfile"
