@@ -22,7 +22,7 @@ while (true); do
     if [ -n "$(ls -A /srv/iarchive)" ]; then
         itemidentifier=`ls -t /srv/iarchive | tail -1` # No need for shuffling here; it's already done.
         echo "We'll play $itemidentifier"
-        for freshfile in `ls /srv/iarchive/$itemidentifier --sort=size`; do
+        for freshfile in `ls /srv/iarchive/$itemidentifier --sort=size | grep -v ".mp3"`; do
             echo "Selecting $freshfile"
             echo "$(TZ="America/Chicago" date) streaming $itemidentifier - $freshfile" >> $LOGNAME
             find $NV_ROOT/logs/np/ -type f ! -name nowplaying_$D.log -delete
