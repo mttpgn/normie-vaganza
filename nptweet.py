@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 import tweepy
 
-twitch_name = 'normeie-vaganza'
+twitch_name = 'normeievaganza'
 proj_name = 'normie-vaganza'
 nv_root = '/var/opt/' + proj_name
 keys = ['/etc/tweepy_akey',\
