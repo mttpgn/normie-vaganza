@@ -5,12 +5,13 @@ This is the code for a [24/7 Twitch stream](https://twitch.tv/normievaganza "Nor
 The setup.sh script allows this script easily to be customized to suit the interests of any other normie who wants to stream content. 
 
 ## Requirements
-Run the following commands to install the necessary dependencies. 
+Run the following command to install the necessary dependencies. 
+
 `pip install internetarchive tweepy`
 
 The script also relies on `ffmpeg` for streaming. The [latest static builds](https://www.johnvansickle.com/ffmpeg/) 
 support hardware x264 compression. The versions available from standard 
-repositories (> 3.0) lack this feature, which I did make use of in the stream 
+repositories (< 3.0) lack this feature, which I did make use of in the stream 
 command. A default build of ffmpeg from source will not include all linked 
 dependencies and has not worked for me, but feel free to try. After 
 downloading `ffmpeg`, you may need to edit `fstream_file.sh` with the location 
