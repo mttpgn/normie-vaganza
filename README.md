@@ -47,7 +47,7 @@ on the [internetarchive documentation page](https://internetarchive.readthedocs.
 
 I've hardcoded a few exceptions into `dlia.sh` which get turned into a 
 badstuff.txt with the identifiers for all the files I don't want that match 
-the search parameters.
+the search parameters. Eventually this will probably be a separate file.
 
 ## Licensing
 I've chosen to get videos that meet the criteria for public domain or other
