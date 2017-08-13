@@ -11,9 +11,10 @@
 ## finished being broadcast.                                 ##
 ##                                                           ##
 ###############################################################
-PROJ_NAME="normie-vaganza"
-NV_ROOT="/var/opt/$PROJ_NAME"
-CURR_TIMEZONE="America/Chicago"
+PROJ_NAME="normie-vaganza"      # Change to the name of your stream.
+CURR_TIMEZONE="America/Chicago" # Change to your timezone.
+USING_TWITTER=true              # Change to false if you don't want to tweet.
+NV_ROOT="/var/opt/$PROJ_NAME"   # Don't change this.
 
 $NV_ROOT/dlia.sh &
 
@@ -29,7 +30,9 @@ while (true); do
             find $NV_ROOT/logs/np/ -type f ! -name nowplaying_$D.log -delete
             title=`ia metadata $itemidentifier | jq '.metadata.title'`
             echo $title > "$NV_ROOT/logs/latestid.txt"
-            python $NV_ROOT/nptweet.py
+            if $USING_TWITTER; then
+                python $NV_ROOT/nptweet.py
+            fi
             echo "Updated Twitter with our current title."
             $NV_ROOT/fstream_file.sh /srv/iarchive/$itemidentifier/$freshfile
             rm -vf /srv/iarchive/$itemidentifier/$freshfile # Delete the file we just played (maybe there are others yet to be played).
