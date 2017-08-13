@@ -1,8 +1,7 @@
 #!/bin/bash
 
-if [ -f /var/opt/ffmpeg-3.3.2-armhf-32bit-static/ffmpeg ]; then
-    FFMPEG_LOC=/var/opt/ffmpeg-3.3.2-armhf-32bit-static/ffmpeg
-else
+FFMPEG_LOC=/var/opt/ffmpeg-3.3.2-armhf-32bit-static/ffmpeg
+if [ ! -f $FFMPEG_LOC ]; then
     FFMPEG_LOC=ffmpeg
 
 APIKEY=`cat /etc/twitchapikey`
