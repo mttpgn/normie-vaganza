@@ -32,7 +32,7 @@ you'll be using to broadcast your stream. Write them to the above locations.
 
 ## Twitter use
 By default, normie-vaganza will tweet out the title of the video that's 
-currently playing. To disable this, simply change USING_TWITTER to `false`
+currently playing. To disable this, simply change $USING_TWITTER to `false`
 in moviebroadcasting.sh.
 
 ## Customization
@@ -52,8 +52,8 @@ the search parameters. Eventually this will probably be a separate file.
 ## Licensing
 I've chosen to get videos that meet the criteria for public domain or other
 Creative Commons licensing. In the future, the filter may be tightened 
-further so that only Public Domain videos are streamed, since I am not sure
-whether or not tweeting out the "Now PLaying" meets the requirements for 
+further so that only public domain videos are streamed since I am not sure
+whether or not tweeting what's "Now Playing" meets the requirements for 
 attribution.
 
 Twitch's terms of service do not allow for the streaming of copyrighted content.
