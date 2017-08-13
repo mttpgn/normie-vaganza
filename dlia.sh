@@ -10,7 +10,8 @@
 ##                                                                           ##
 ###############################################################################
 
-NV_ROOT="/var/opt/normie-vaganza"
+PROJ_NAME="normie-vaganza"
+NV_ROOT="/var/opt/$PROJ_NAME"
 SEARCHPARAMETERS="$NV_ROOT/config/searchparams.cfg"
 ITEMLIST="$NV_ROOT/config/itemlist.txt"
 BADSTUFF="$NV_ROOT/config/badstuff.txt"

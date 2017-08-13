@@ -1,6 +1,9 @@
 #!/usr/bin/python2.7
 import tweepy
 
+twitch_name = 'normeie-vaganza'
+proj_name = 'normie-vaganza'
+nv_root = '/var/opt/' + proj_name
 keys = ['/etc/tweepy_akey',\
         '/etc/tweepy_asecret',\
         '/etc/tweepy_ckey',\
@@ -19,10 +22,9 @@ csecret = secretkeys[3]
 auth = tweepy.OAuthHandler(ckey,csecret)
 auth.set_access_token(akey, asecret)
 api = tweepy.API(auth)
-nv_root = '/var/opt/normie-vaganza'
 with open(nv_root+'/logs/latestid.txt', 'r') as npfile:
     new_status = npfile.read()
 
-api.update_status("Now playing on https://twitch.tv/normievaganza : " + new_status)
+api.update_status("Now playing on https://twitch.tv/" + twitch_name + " : " + new_status)
 
 

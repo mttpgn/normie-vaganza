@@ -11,8 +11,9 @@
 ## finished being broadcast.                                 ##
 ##                                                           ##
 ###############################################################
-
-NV_ROOT="/var/opt/normie-vaganza"
+PROJ_NAME="normie-vaganza"
+NV_ROOT="/var/opt/$PROJ_NAME"
+CURR_TIMEZONE="America/Chicago"
 
 $NV_ROOT/dlia.sh &
 
@@ -24,7 +25,7 @@ while (true); do
         echo "We'll play $itemidentifier"
         for freshfile in `ls /srv/iarchive/$itemidentifier --sort=size | grep -v ".mp3"`; do
             echo "Selecting $freshfile"
-            echo "$(TZ="America/Chicago" date) streaming $itemidentifier - $freshfile" >> $LOGNAME
+            echo "$(TZ=$CURR_TIMEZONE date) streaming $itemidentifier - $freshfile" >> $LOGNAME
             find $NV_ROOT/logs/np/ -type f ! -name nowplaying_$D.log -delete
             title=`ia metadata $itemidentifier | jq '.metadata.title'`
             echo $title > "$NV_ROOT/logs/latestid.txt"
