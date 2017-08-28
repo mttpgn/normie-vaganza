@@ -48,10 +48,9 @@ The content downloaded for streaming is determined by the search parameters
 given at `searchparams.cfg`. The syntax for these searches is documented 
 on the [internetarchive documentation page](https://internetarchive.readthedocs.io/en/latest/cli.html#search).
 
-I've hardcoded a few exceptions into `dlia.sh` which get turned into a 
-badstuff.txt with the identifiers for all the files I don't want, even though
-they match the search parameters. Eventually this logic should probably be a 
-separate file.
+I've hardcoded a few exceptions into `dlia.sh` which get turned automatically 
+into a badstuff.txt with the identifiers for all the files I don't want, even 
+though they match the search parameters. 
 
 ## Licensing
 I've chosen to get videos that meet the criteria for public domain or other
@@ -61,3 +60,12 @@ whether or not tweeting what's "Now Playing" meets the requirements for
 attribution.
 
 Twitch's terms of service do not allow for the streaming of copyrighted content.
+
+## Usage
+Simply run `moviebroadcasting.sh` inside a `screen` or `tmux` session. The
+script will run continuously without requiring input. The script pulls new 
+content as needed from the web and deletes videos after they've been viewed.
+
+The application automatically montiors the utilized space of the filesystem
+/srv resides on and will not pull additional content after a 90% threshold 
+is breeched.
