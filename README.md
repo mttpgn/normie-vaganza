@@ -1,6 +1,6 @@
 # normie-vaganza
 
-This is the code for a [24/7 Twitch stream](https://twitch.tv/normievaganza "Normie-vaganza on Twitch"), which is live at the current time of publication.
+This is the code for a [24/7 Twitch stream](https://twitch.tv/normievaganza "Normie-vaganza on Twitch"), which is ~live at the current time of publication~ no longer live.
 
 The `setup.sh` script allows this script easily to be customized to suit the 
 interests of any other normie who wants to stream content. 
